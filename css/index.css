@@ -27,7 +27,7 @@
     height:100%;
     position : absolute;
     z-index:0;
-    background-image: url('./black.gif');
+    background-image: url('/assets/images/black.gif');
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
