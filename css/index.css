@@ -28,7 +28,7 @@
     position : absolute;
     z-index:0;
     /*background-image: url('{{ site.baseurl }}/img/black.gif'); */
-    background-image: url('https://i.imgur.com/7ITGf8J.gifv'); 
+    background-image: url('https://media.githubusercontent.com/media/younesbelkada/test_page/main/assets/images/black.gif'); 
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
