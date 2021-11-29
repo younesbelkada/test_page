@@ -330,12 +330,12 @@
 
 				<!-- /Section header -->
 				<div class="abstract-body col-md-12">
-				  <h3 id="download-the-dataset">Download the dataset</h1>
-				    <h4 id="manual-download">Manual download</h2>
+				  <h3 id="download-the-dataset">Download the datasets</h3>
+				    <h4 id="manual-download">Manual download</h4>
 				      <p>Start by creating a <code>LOOK</code> folder.</p>
-				      <h5 id="annotations">Annotations</h3>
-				        <p>You can download the LOOK annotation file <a href="https://drive.google.com/file/d/1fPTU5IZQtkb1ay1rjHNFYP0ta8RvAWlc/view?usp=sharing">here</a> and copy it in the <code>LOOK</code> folder.</p>
-				       <h5 id="nuscenes">Nuscenes</h3>
+				      <h5 id="annotations">Annotations</h5>
+				        <p>You can download the LOOK annotation file <a href="https://drive.google.com/file/d/1fPTU5IZQtkb1ay1rjHNFYP0ta8RvAWlc/view?usp=sharing">here</a> and copy it inside the <code>LOOK</code> folder.</p>
+				       <h5 id="nuscenes">Nuscenes</h5>
 
 				    <p>Nuscenes mainly consists of high resolution images with some crowded scenes on a traffic configuration.  </p>
 
@@ -343,17 +343,28 @@
 				      <li>Go to <a href="https://www.nuscenes.org/download">Nuscenes official website</a> and download the <code>samples</code> and the <code>CAM_BACK_LEFT</code> <code>sweeps</code> from the server closest to your location (<code>US</code> or <code>ASIA</code>).
 				        Create a <code>Nuscenes</code>folder inside the <code>LOOK</code> folder and extract the downloaded files there.</li>
 				      </ul>
-				    <h5 id="jrdb">JRDB</h3>
+				    <h5 id="jrdb">JRDB</h5>
 				        <p>Create a folder <code>JRDB</code> inside <code>LOOK</code>.
 				          Download the JRDB train dataset from <a href="https://download.cs.stanford.edu/downloads/jrdb/jrdb_train.zip">here</a> and extract it in the <code>JRDB</code> folder you just created.</p>
-				        <h5 id="kitti">Kitti</h3>
+				        <h5 id="kitti">Kitti</h5>
 				    <p>Inside the <code>LOOK</code>folder, create a <code>Kitti</code> folder.</p>
 
-				    <h6 id="training-data">Training data</h4>
+				    <h6 id="training-data">Training data</h6>
 				      <p>Create an account at the Kitti Benchmark website and move to the <a href="http://www.cvlibs.net/datasets/kitti/raw_data.php">raw data</a> section. Download the <code>2011_09_29_drive_0071 [synced+rectified data]</code> folder, you can directly use <a href="https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_29_drive_0071/2011_09_29_drive_0071_sync.zip">this link</a>.</p>
 				      <p>Unzip the folder and copy the <code>2011_09_29/2011_09_29_drive_0071_sync/image_03/data</code> folder into the <code>Kitti</code> folder you created. Rename it <code>train</code>.</p>
-				      <h6 id="testing-data">Testing data</h4>
+				      <h6 id="testing-data">Testing data</h6>
 				        <p>Move to the 2d Object detection benchmark <a href="http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark">here</a>. Download the first folder called <code>Download left color images of object data set (12 GB)</code> or directly using this <a href="https://s3.eu-central-1.amazonaws.com/avg-kitti/data_object_image_2.zip">link</a>. Unzip the folder and copy the folder <code>data_object_image_2/training/image_2</code> into the <code>Kitti</code> folder. Rename it <code>test</code>.</p>
+
+
+					<h3 id="filter-the-dataset">Filter the dataset</h3>
+						<p> To keep only the files with a <strong>LOOK</strong> annotation, you neeed to filter the datasets you previously downloaded. To do so, you can download the <a href="https://drive.google.com/file/d/1TuAFlKynvhKf3m5Agz-fAWL7X82g3k4j/view?usp=sharing">extract_look_dataset.py</a> python script.
+								This script allows you to extract only the annotated images and reorganize them in order the respect the paths of the LOOK dataset.
+								To run this script you need to use python 3 running and the pandas library. <br>
+								To be able to run the script you need to input the name of the dataset(s) you want to filter and the path to the annotation file.
+								To run the script for all the datasets, you can navigate inside the <code>LOOK</code> folder in a terminal window and run the command <code>python extract_look_dataset.py -d Nuscenes,Kitti,JRDB -a LOOK_annotations.csv</code>.
+						</p>
+
+					<h3 id="the-dataset">The dataset</h3>
 
 
 				</div>
