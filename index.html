@@ -53,14 +53,15 @@
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+	
+	<!--
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-89674082-5"></script>
 	<script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
 
-	gtag('config', 'UA-89674082-5');
+	gtag('config', 'UA-89674082-5'); -->
 </script>
 
 
@@ -93,12 +94,12 @@
 
 				<!--  Main navigation  -->
 				<ul class="main-nav nav navbar-nav navbar-right">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#dataset">Dataset</a></li>
-					<li><a href="#paper">Paper</a></li>
+					<li><a href="https://looking-vita-epfl.github.io/">Home</a></li>
+					<li><a href="./dataset">Dataset</a></li>
+					<li><a href="https://looking-vita-epfl.github.io/#paper">Paper</a></li>
 					<li><a href="https://github.com/vita-epfl/looking">Code</a></li>
-					<li><a href="#team">Authors</a></li>
-					<li><a href="#licenses">Licenses</a></li>
+					<li><a href="https://looking-vita-epfl.github.io/#team">Authors</a></li>
+					<li><a href="https://looking-vita-epfl.github.io/#licenses">Licenses</a></li>
 					<!-- <li class="has-dropdown"><a href="#blog">Blog</a> -->
 					<!-- <ul class="dropdown"> -->
 					<!-- <li><a href="blog-single.html">blog post</a></li> -->
@@ -141,7 +142,7 @@
 
 
 							<br>
-							<button id="learnmore" class="outline-btn roundedbutton">Learn more</button>
+							<button id="learnmore" class="outline-btn roundedbutton"> <a href="#abstract">Learn more</a></button>
 						</div>
 					</div>
 					<!-- /home content -->
@@ -188,6 +189,17 @@
 <!-- Row -->
 <div class="row" style="margin: 0px">
 
+	<div class="col-md-3 col-sm-6">
+		<div class="service smoothscroll" href="./datset"  onclick="window.location.href='#dataset'">
+			<div class="service-content  service-row-1">
+				<i class="fa fa-folder-open"></i>
+				<h3>Dataset</h3>
+				<p>Download the LOOK dataset ground truths</p>
+				<a href="./dataset">Dataset Page</a>
+			</div>
+		</div>
+	</div>
+
 	<!-- service -->
 	<div class="col-md-3 col-sm-6">
 		<div class="service smoothscroll" href="#paper">
@@ -202,31 +214,8 @@
 
 	<!-- /service -->
 
-	<div class="col-md-3 col-sm-6">
-		<div class="service smoothscroll" href="#transfers"  onclick="window.location.href='#dataset'">
-			<div class="service-content  service-row-1">
-				<i class="fa fa-folder-open"></i>
-				<h3>Dataset</h3>
-				<p>Download the LOOK dataset ground truths</p>
-				<a href="#dataset">Dataset Page</a>
-			</div>
-		</div>
-	</div>
+	
 
-	<!-- service -->
-	<div class="col-md-3 col-sm-6">
-		<div class="service smoothscroll" href="#transfers"  onclick="window.location.href='#visualization'">
-			<div class="service-content  service-row-1">
-				<i class="fa fa-video-camera"></i>
-				<h3>Visualization</h3>
-				<p>Examine the visualization of the LOOK dataset ground truths</p>
-				<a href="#visuals">Visualization Page</a>
-			</div>
-		</div>
-	</div>
-	<!-- /service -->
-
-	<!-- service -->
 	<div class="col-md-3 col-sm-6">
 		<div class="service smoothscroll" href="https://github.com/vita-epfl/looking">
 			<div class="service-content service-row-1">
@@ -238,6 +227,22 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- service -->
+	<div class="col-md-3 col-sm-6">
+		<div class="service smoothscroll" href="#authors"  onclick="window.location.href='#visualization'">
+			<div class="service-content  service-row-1">
+				<i class="fa fa-address-card"></i>
+				<h3>Authors</h3>
+				<p>You think that this task is exciting and want to contribute to the project?</p>
+				<a href="#authors">Contact the authors</a>
+			</div>
+		</div>
+	</div>
+	<!-- /service -->
+
+	<!-- service -->
+	
 	<!-- /service -->
 
 
@@ -315,134 +320,7 @@
 	<!-- /Summary -->
 
 	<!-- Tryit -->
-	<div id="dataset" class="section md-padding bg-grey">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section header -->
-				<div class="section-header text-center">
-					<h2 class="title">LOOK Dataset</h2>
-				</div>
-
-				<!-- /Section header -->
-				<div class="abstract-body col-md-12">
-					<h3 id="download-the-dataset">Download the datasets</h3>
-					<h4 id="manual-download">Manual download</h4>
-					<p>Start by creating a <code>LOOK</code> folder.</p>
-					<h5 id="annotations">Annotations</h5>
-					<p>You can download the LOOK annotation file <a href="https://drive.google.com/file/d/1fPTU5IZQtkb1ay1rjHNFYP0ta8RvAWlc/view?usp=sharing">here</a> and copy it inside the <code>LOOK</code> folder.</p>
-					<h5 id="nuscenes">Nuscenes</h5>
-					Go to <a href="https://www.nuscenes.org/download">Nuscenes official website</a> and download the <code>samples</code> and the <code>CAM_BACK_LEFT</code> <code>sweeps</code> from the server closest to your location (<code>US</code> or <code>ASIA</code>).
-					Create a <code>Nuscenes</code>folder inside the <code>LOOK</code> folder and extract the downloaded files there.</li>
-					<h5 id="jrdb">JRDB</h5>
-					<p>Create a folder <code>JRDB</code> inside <code>LOOK</code>.
-					Download the JRDB train dataset from <a href="https://download.cs.stanford.edu/downloads/jrdb/jrdb_train.zip">here</a> and extract it in the <code>JRDB</code> folder you just created.</p>
-					<h5 id="kitti">Kitti</h5>
-					<p>Inside the <code>LOOK</code>folder, create a <code>Kitti</code> folder.</p>
-
-					<h6 id="training-data">Training data</h6>
-					<p>Create an account at the Kitti Benchmark website and move to the <a href="http://www.cvlibs.net/datasets/kitti/raw_data.php">raw data</a> section. Download the <code>2011_09_29_drive_0071 [synced+rectified data]</code> folder, you can directly use <a href="https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_29_drive_0071/2011_09_29_drive_0071_sync.zip">this link</a>.</p>
-					<p>Unzip the folder and copy the <code>2011_09_29/2011_09_29_drive_0071_sync/image_03/data</code> folder into the <code>Kitti</code> folder you created. Rename it <code>train</code>.</p>
-					<h6 id="testing-data">Testing data</h6>
-					<p>Move to the 2d Object detection benchmark <a href="http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark">here</a>. Download the first folder called <code>Download left color images of object data set (12 GB)</code> or directly using this <a href="https://s3.eu-central-1.amazonaws.com/avg-kitti/data_object_image_2.zip">link</a>. Unzip the folder and copy the folder <code>data_object_image_2/training/image_2</code> into the <code>Kitti</code> folder. Rename it <code>test</code>.</p>
-
-					<br>
-					<br>
-
-					<h3 id="filter-the-dataset">Filter the dataset</h3>
-					<p> To keep only the files with a <strong>LOOK</strong> annotation, you neeed to filter the datasets you previously downloaded. To do so, you can download the <a href="https://drive.google.com/file/d/1TuAFlKynvhKf3m5Agz-fAWL7X82g3k4j/view?usp=sharing">extract_look_dataset.py</a> python script.
-						This script allows you to extract only the annotated images and reorganize them in order the respect the paths of the LOOK dataset.
-						To run this script you need to use python 3 running and the pandas library. <br>
-						To be able to run the script you need to input the name of the dataset(s) you want to filter and the path to the annotation file.
-						To run the script for all the datasets, you can navigate inside the <code>LOOK</code> folder in a terminal window and run the command <br>
-						<code>python extract_look_dataset.py -d Nuscenes,Kitti,JRDB -a LOOK_annotations.csv</code>.
-					</p>
-					<br>
-					<br>
-
-					<h3 id="the-dataset">The dataset</h3>
-					<p>
-						The <strong>LOOK</strong> dataset is made of images from 3 different existing datasets where we annotated the pedestrians as looking (1) or not (0) at the camera.
-						<ul>
-							<li><strong>nuScenes</strong> contains 1,600x900 .jpg images.</li>
-							<div class="figure row">
-								<img width="50%" src="./img/nuscenes.png" alt="" class="center">
-								<p class='col-sm-10 col-sm-offset-1' style='text-align: justify;'>
-
-								</p>
-							</div>
-							<li><strong>Kitti</strong> contains .png images at different resolutions.</li>
-							<div class="figure row">
-								<img width="50%" src="./img/kitti.png" alt="" class="center">
-								<p class='col-sm-10 col-sm-offset-1' style='text-align: justify;'>
-
-								</p>
-							</div>
-							<li><strong>JRDB</strong> contains 752x480 .jpg images.</li>
-							<div class="figure row">
-								<img width="50%" src="./img/JRDB_1.jpg" alt="" class="center">
-								<p class='col-sm-10 col-sm-offset-1' style='text-align: justify;'>
-
-								</p>
-							</div>
-						</ul>
-					</p>
-
-					<table>
-					<thead>
-					<tr>
-					<th align="center">Dataset</th>
-					<th align="center">Frames</th>
-					<th align="center">Instances</th>
-					<th align="center">Looking</th>
-					<th align="center">Pedestrians</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-					<td align="center">nuScenes</td>
-					<td align="center">2,216</td>
-					<td align="center">13K</td>
-					<td align="center">9%</td>
-					<td align="center">7,100</td>
-					</tr>
-					<tr>
-					<td align="center">Kitti</td>
-					<td align="center">1,391</td>
-					<td align="center">4,630</td>
-					<td align="center">17%</td>
-					<td align="center">425</td>
-					</tr>
-					<tr>
-					<td align="center">JRDB</td>
-					<td align="center">9,441</td>
-					<td align="center">39K</td>
-					<td align="center">18%</td>
-					<td align="center">399</td>
-					</tr>
-					<tr>
-					<td align="center"><strong>LOOK</strong></td>
-					<td align="center"><strong>13K</strong></td>
-					<td align="center"><strong>57K</strong></td>
-					<td align="center"><strong>16%</strong></td>
-					<td align="center"><strong>7,944</strong></td>
-					</tr>
-					</tbody>
-					</table>
-
-
-					</div>
-				</div>
-				<!-- /Row -->
-
-			</div>
-			<!-- /Tryit -->
-
-		</div>
+	
 		<!-- /Summary -->
 
 		<!-- /Sample Results -->
